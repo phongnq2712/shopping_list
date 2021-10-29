@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="piL-rU-5CI">
-                                <rect key="frame" x="10" y="73" width="394" height="160.5"/>
+                                <rect key="frame" x="10" y="73" width="394" height="174"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kPi-dj-vfP">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="35.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -28,15 +27,15 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwC-UE-Tz3">
-                                        <rect key="frame" x="0.0" y="76.5" width="394" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="85" width="394" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" red="0.10588235294117647" green="0.21176470588235294" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter New List Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYK-v6-Hao">
-                                        <rect key="frame" x="0.0" y="139" width="394" height="21.5"/>
+                                        <rect key="frame" x="0.0" y="152.5" width="394" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.10588235294117647" green="0.21176470588235294" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -48,17 +47,21 @@
                                 <rect key="frame" x="10" y="417" width="394" height="34"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qo7-Vx-cdz">
-                                        <rect key="frame" x="0.0" y="0.0" width="268" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="267" height="34"/>
+                                        <color key="textColor" red="0.10588235294117647" green="0.21176470588235294" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ip7-GI-WyQ">
-                                        <rect key="frame" x="268" y="0.0" width="32" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="267" y="0.0" width="33" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="pLp-o0-lka">
                                         <rect key="frame" x="300" y="0.0" width="94" height="34"/>
+                                        <connections>
+                                            <action selector="stepperHandle:" destination="BYZ-38-t0r" eventType="valueChanged" id="Xb6-yH-7Hb"/>
+                                        </connections>
                                     </stepper>
                                 </subviews>
                             </stackView>
@@ -66,17 +69,21 @@
                                 <rect key="frame" x="10" y="481" width="394" height="34"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FKb-n3-Boo">
-                                        <rect key="frame" x="0.0" y="0.0" width="268" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="267" height="34"/>
+                                        <color key="textColor" red="0.10588235294117647" green="0.21176470588235294" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qsU-dV-uYh">
-                                        <rect key="frame" x="268" y="0.0" width="32" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="267" y="0.0" width="33" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="4Kh-39-8H8">
                                         <rect key="frame" x="300" y="0.0" width="94" height="34"/>
+                                        <connections>
+                                            <action selector="stepperHandle:" destination="BYZ-38-t0r" eventType="valueChanged" id="pRj-fQ-sfZ"/>
+                                        </connections>
                                     </stepper>
                                 </subviews>
                             </stackView>
@@ -84,17 +91,21 @@
                                 <rect key="frame" x="10" y="284" width="394" height="34"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YXG-DY-iCq">
-                                        <rect key="frame" x="0.0" y="0.0" width="268" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="267" height="34"/>
+                                        <color key="textColor" red="0.10588235294117647" green="0.21176470588235294" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xhB-UA-fIT">
-                                        <rect key="frame" x="268" y="0.0" width="32" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="267" y="0.0" width="33" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="F1v-Zl-JO8">
                                         <rect key="frame" x="300" y="0.0" width="94" height="34"/>
+                                        <connections>
+                                            <action selector="stepperHandle:" destination="BYZ-38-t0r" eventType="valueChanged" id="szt-1n-ZTY"/>
+                                        </connections>
                                     </stepper>
                                 </subviews>
                             </stackView>
@@ -102,17 +113,21 @@
                                 <rect key="frame" x="10" y="353" width="394" height="34"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EiG-Yk-kYc">
-                                        <rect key="frame" x="0.0" y="0.0" width="268" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="267" height="34"/>
+                                        <color key="textColor" red="0.10588235294117647" green="0.21176470588235294" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ASR-iK-Ab7">
-                                        <rect key="frame" x="268" y="0.0" width="32" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="267" y="0.0" width="33" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="te5-Gn-mI7">
                                         <rect key="frame" x="300" y="0.0" width="94" height="34"/>
+                                        <connections>
+                                            <action selector="stepperHandle:" destination="BYZ-38-t0r" eventType="valueChanged" id="gMc-ON-c5N"/>
+                                        </connections>
                                     </stepper>
                                 </subviews>
                             </stackView>
@@ -120,23 +135,27 @@
                                 <rect key="frame" x="10" y="545" width="394" height="34"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L5d-vb-xZe">
-                                        <rect key="frame" x="0.0" y="0.0" width="268" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="267" height="34"/>
+                                        <color key="textColor" red="0.10588235294117647" green="0.21176470588235294" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IqO-nF-chr">
-                                        <rect key="frame" x="268" y="0.0" width="32" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="267" y="0.0" width="33" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ttC-50-j3X">
                                         <rect key="frame" x="300" y="0.0" width="94" height="34"/>
+                                        <connections>
+                                            <action selector="stepperHandle:" destination="BYZ-38-t0r" eventType="valueChanged" id="8RT-5n-Pet"/>
+                                        </connections>
                                     </stepper>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.97254901960784312" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Jf2-iF-WXh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="501" id="20R-3c-hu4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jf2-iF-WXh" secondAttribute="trailing" constant="10" id="6sa-sh-gZb"/>
@@ -161,7 +180,22 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="item1" destination="YXG-DY-iCq" id="DOf-Vq-HfY"/>
+                        <outlet property="item2" destination="EiG-Yk-kYc" id="nev-8W-5QG"/>
+                        <outlet property="item3" destination="Qo7-Vx-cdz" id="RLb-Tw-cOW"/>
+                        <outlet property="item4" destination="FKb-n3-Boo" id="Y2v-nd-ViC"/>
+                        <outlet property="item5" destination="L5d-vb-xZe" id="VUM-v1-Sga"/>
                         <outlet property="lblListName" destination="EwC-UE-Tz3" id="ebJ-6I-D1c"/>
+                        <outlet property="qty1" destination="xhB-UA-fIT" id="heh-G1-wSQ"/>
+                        <outlet property="qty2" destination="ASR-iK-Ab7" id="HnQ-RP-bNb"/>
+                        <outlet property="qty3" destination="Ip7-GI-WyQ" id="npg-UO-jlN"/>
+                        <outlet property="qty4" destination="qsU-dV-uYh" id="jxF-kj-18s"/>
+                        <outlet property="qty5" destination="IqO-nF-chr" id="6B4-jq-bdF"/>
+                        <outlet property="stepper1" destination="F1v-Zl-JO8" id="xzj-S0-InF"/>
+                        <outlet property="stepper2" destination="te5-Gn-mI7" id="Xio-Ck-bBR"/>
+                        <outlet property="stepper3" destination="pLp-o0-lka" id="vl2-fu-wsW"/>
+                        <outlet property="stepper4" destination="4Kh-39-8H8" id="HgY-zP-BBF"/>
+                        <outlet property="stepper5" destination="ttC-50-j3X" id="RZ5-4d-5aw"/>
                         <outlet property="textFieldListName" destination="kPi-dj-vfP" id="hFg-43-RuU"/>
                     </connections>
                 </viewController>
@@ -170,9 +204,4 @@
             <point key="canvasLocation" x="37.681159420289859" y="75.669642857142847"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
