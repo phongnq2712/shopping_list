@@ -1,8 +1,8 @@
 /**
- * File Name: ViewController
- * Author's Name: Quoc Phong Ngo
- * Student ID: 301148406
- * Date: October 27th, 2021
+ * File Name:           ViewController
+ * Author's Name:   Quoc Phong Ngo
+ * Student ID:          301148406
+ * Date Modified:    October 30th, 2021
  */
 
 import UIKit
@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblListName: UILabel!
     @IBOutlet weak var textFieldListName: UITextField!
     
+    @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var stepper5: UIStepper!
     @IBOutlet weak var stepper4: UIStepper!
     @IBOutlet weak var stepper3: UIStepper!
@@ -35,6 +36,9 @@ class ViewController: UIViewController {
         initialize()
     }
     
+    /**
+     * Application Initialization
+     */
     private func initialize() {
         textFieldListName.text = nil
         textFieldListName.placeholder = "Enter New List Name"
@@ -51,6 +55,9 @@ class ViewController: UIViewController {
         qty5.text = "0"
     }
     
+    /**
+     * Handling on click of Stepper
+     */
     @IBAction func stepperHandle(_ sender: UIStepper) {
         if(sender == self.stepper1) {
             qty1.text = String(Int(stepper1.value))
@@ -64,8 +71,28 @@ class ViewController: UIViewController {
             qty5.text = String(Int(stepper5.value))
         }
     }
+    
+    /**
+     * Handling event OnChanged of Text Input List Name
+     */
     @IBAction func texFieldListNameChanged(_ sender: UITextField) {
         lblListName.text = textFieldListName.text
+    }
+    
+    /**
+     * Handling on click event of Cancel button
+     */
+    @IBAction func btnCancel_Clicked(_ sender: UIButton) {
+        qty1.text = "0"
+        qty2.text = "0"
+        qty3.text = "0"
+        qty4.text = "0"
+        qty5.text = "0"
+        item1.text = ""
+        item2.text = ""
+        item3.text = ""
+        item4.text = ""
+        item5.text = ""
     }
 }
 

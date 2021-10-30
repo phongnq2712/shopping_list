@@ -153,6 +153,27 @@
                                     </stepper>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHz-S7-e1i">
+                                <rect key="frame" x="102" y="630" width="80" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.63921568627450975" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.047058823529411764" green="0.30980392156862746" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4HF-x2-Vjw">
+                                <rect key="frame" x="232" y="629" width="80" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.63921568630000003" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.047058823529411764" green="0.30980392156862746" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCancel_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yld-1a-1qw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="0.97254901960784312" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
@@ -180,6 +201,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnCancel" destination="4HF-x2-Vjw" id="jjL-Ja-Rel"/>
                         <outlet property="item1" destination="YXG-DY-iCq" id="DOf-Vq-HfY"/>
                         <outlet property="item2" destination="EiG-Yk-kYc" id="nev-8W-5QG"/>
                         <outlet property="item3" destination="Qo7-Vx-cdz" id="RLb-Tw-cOW"/>
