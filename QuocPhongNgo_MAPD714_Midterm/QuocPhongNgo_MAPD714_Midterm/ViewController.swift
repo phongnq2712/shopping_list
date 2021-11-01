@@ -91,6 +91,7 @@ class ViewController: UIViewController {
         item3.text = ""
         item4.text = ""
         item5.text = ""
+        textFieldListName.text = "My Shopping List"
     }
     
     @IBAction func textFieldEndEditing(_ sender: UITextField) {
