@@ -29,10 +29,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var item1: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        for textField in self.view.subviews where textField is UITextField {
-            textField.resignFirstResponder()
-        }
         initialize()
     }
     
@@ -41,8 +37,8 @@ class ViewController: UIViewController {
      */
     private func initialize() {
         textFieldListName.text = nil
-        textFieldListName.placeholder = "Enter New List Name"
-        lblListName.text = "My Shopping List"
+        textFieldListName.text = "My Shopping List"
+        lblListName.text = "Enter List Name"
         item1.text = "Non-Fat Milk"
         item2.text = "Carton of Eggs"
         item3.text = "Wheat Bread"
@@ -76,7 +72,9 @@ class ViewController: UIViewController {
      * Handling event OnChanged of Text Input List Name
      */
     @IBAction func texFieldListNameChanged(_ sender: UITextField) {
-        lblListName.text = textFieldListName.text
+        if(textFieldListName.text!.isEmpty) {
+            textFieldListName.text = "My Shopping List"
+        }
     }
     
     /**
@@ -93,6 +91,22 @@ class ViewController: UIViewController {
         item3.text = ""
         item4.text = ""
         item5.text = ""
+    }
+    
+    @IBAction func textFieldEndEditing(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    /**
+     * Handling resignFirstResponder
+     */
+    @IBAction func onTapGestureRecognized(_ sender: Any) {
+        item1.resignFirstResponder()
+        item2.resignFirstResponder()
+        item3.resignFirstResponder()
+        item4.resignFirstResponder()
+        item5.resignFirstResponder()
+        textFieldListName.resignFirstResponder()
     }
 }
 
